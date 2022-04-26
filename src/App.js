@@ -1,10 +1,13 @@
+import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Routing from './routes';
 
 function App() {
   return (
     <div className="App">
-      <Routing/>
+      <ThemeProvider theme={theme}>
+        <Routing />
+      </ThemeProvider>
     </div>
   );
 }
