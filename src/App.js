@@ -1,14 +1,19 @@
+import { useContext } from 'react';
 import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Routing from './routes';
-import { GlobalStyle, theme } from './theme';
+import { darkMode, GlobalStyle, lightMode } from './theme';
+import { ThemeContext, ThemeModeProvider } from './common/Context/ContextThemeMode';
 
 function App() {
+
+  const ThemeMode = useContext(ThemeContext)
+
   return (
     <div className="App">
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={ThemeMode.lightMode? lightMode: darkMode}>
         <Routing />
-        <GlobalStyle/>
+        <GlobalStyle />
       </ThemeProvider>
     </div>
   );

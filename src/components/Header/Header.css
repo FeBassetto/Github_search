@@ -9,9 +9,11 @@
 
     padding: 0 2vw;
     box-sizing: border-box;
+
+    position: fixed;
 }
 
-.header>* a:hover {
+.header>* a:hover , .header > * svg:hover{
     cursor: pointer;
     opacity: .7;
     transition: .4s;

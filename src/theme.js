@@ -48,19 +48,18 @@ export const GlobalStyle = createGlobalStyle`
     }
   `
 
-export const theme = {
-    lightMode: {
-        dark: '#24292F',
-        light: '#F6F8FA',
-        background: '#ffffff',
-        text: '#24292f',
-        headerText: '#ffffff'
-    },
-    darkMode: {
-        dark: '#24292F',
-        light: '#202935',
-        background: '#0D1117',
-        text: '#c9d1d9dark',
-        headerText: '#ffffff'
-    }
+export const lightMode = {
+    dark: '#24292F',
+    light: '#F6F8FA',
+    background: '#ffffff',
+    text: '#24292f',
+    headerText: '#ffffff'
+}
+
+export const darkMode = {
+    dark: '#24292F',
+    light: '#202935',
+    background: '#0D1117',
+    text: '#c9d1d9dark',
+    headerText: '#ffffff'
 }

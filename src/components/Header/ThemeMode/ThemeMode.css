@@ -1,0 +1,7 @@
+.themeMode{
+    width: 5%;
+    font-size: 2vw;
+
+    display: flex;
+    align-items: center;
+}
