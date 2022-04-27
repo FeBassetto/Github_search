@@ -1,0 +1,18 @@
+.titlePage {
+    font-size: 6vw;
+    text-align: center;
+
+    width: 65%;
+    margin: auto;
+
+    font-family: InterBold;
+}
+
+@media screen and (max-width:500px) {
+    .titlePage {
+        font-size: 10vw;
+        width: 90%;
+
+        margin: auto;
+    }
+}

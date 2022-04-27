@@ -60,6 +60,6 @@ export const darkMode = {
     dark: '#24292F',
     light: '#202935',
     background: '#0D1117',
-    text: '#c9d1d9dark',
+    text: '#c9d1d9',
     headerText: '#ffffff'
 }

@@ -1,7 +1,14 @@
 .themeMode{
-    width: 5%;
+    width: 5vw;
     font-size: 2vw;
 
     display: flex;
     align-items: center;
+}
+
+@media screen and (max-width:750px) {
+    .themeMode{
+        font-size: 1rem;
+        width: auto;
+    }
 }

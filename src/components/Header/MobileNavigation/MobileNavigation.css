@@ -1,0 +1,129 @@
+.mobileNavigation__link {
+    color: inherit;
+    text-decoration: none;
+    font-family: RobotoBold;
+}
+
+/* closed */
+
+.mobileNavigation--closed .mobileNavigation__item--hidden {
+    display: none;
+}
+
+.mobileNavigation--closed .mobileNavigation__icon > *:nth-child(2) {
+    display: none;
+}
+
+
+/* open */
+
+.mobileNavigation--open .mobileNavigation__icon > *:nth-child(1) {
+    display: none;
+}
+
+.mobileNavigation--open {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    z-index: 100;
+
+    background-color: inherit;
+
+    height: 100vh;
+    width: 60vw;
+
+    animation-name: openMenu;
+    animation-duration: 1s;
+
+    box-shadow: 0px 0px .5rem #000000;
+
+    overflow: scroll;
+}
+
+@keyframes openMenu {
+    from {
+        right: -100vw;
+    }
+
+    to {
+        right: 0;
+    }
+}
+
+.mobileNavigation--open .mobileNavigation__list {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+.mobileNavigation--open .mobileNavigation__item {
+    border-bottom: 1px solid #ffffff;
+
+    height: 90px;
+    width: 100%;
+}
+
+.mobileNavigation--open .mobileNavigation__item:nth-child(2){
+    border-top: 1px solid #ffffff;
+}
+
+.mobileNavigation--open .mobileNavigation__icon {
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5vw;
+
+    box-sizing: border-box;
+}
+
+.mobileNavigation--open .mobileNavigation__item{
+    font-size: 1.25rem;
+}
+
+
+.mobileNavigation--open .mobileNavigation__item:hover:not(.mobileNavigation__icon){
+    opacity: .7;
+}
+
+.mobileNavigation__link{
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    padding-left: 5vw;
+
+    box-sizing: border-box;
+
+    align-items: center;
+}
+
+.mobileNavigation--closing{
+    animation-name: closingMenu;
+    animation-duration: 1s;
+}
+
+@keyframes closingMenu{
+    from{
+        right: 0;
+    }
+    to{
+        right: -100vw;
+    }
+}
+
+@media screen and (max-width:650px){
+    .mobileNavigation--open{
+        width: 75vw;
+    }
+}
+
+@media screen and (max-width:400px){
+    .mobileNavigation--open{
+        width: 85vw;
+    }
+}

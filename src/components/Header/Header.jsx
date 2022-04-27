@@ -4,23 +4,35 @@ import styled from 'styled-components'
 import Logo from "./Logo/Logo";
 import Navigation from './Navigation/Navigation';
 import ThemeMode from "./ThemeMode/ThemeMode";
+import MobileNavigation from "./MobileNavigation/MobileNavigation";
 
 const StyledHeader = styled.header`
     background-color:${props => props.theme.dark};
 
     && > *{
         color:${props => props.theme.headerText};
+        background-color:${props => props.theme.dark};
     } 
 `
 
 const Header = () => {
 
     return (
-        <StyledHeader className="header">
-            <Logo />
-            <Navigation/>
-            <ThemeMode/>
-        </StyledHeader>
+        <>
+            <StyledHeader className="header header--desktop">
+                <Logo />
+                <Navigation />
+                <ThemeMode />
+            </StyledHeader>
+
+            <StyledHeader className="header header--mobile">
+                <Logo />
+                <div className="header__box">
+                    <ThemeMode />
+                    <MobileNavigation />
+                </div>
+            </StyledHeader>
+        </>
     )
 }
 

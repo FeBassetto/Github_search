@@ -7,7 +7,6 @@ import { ThemeContext } from './../../../common/Context/ContextThemeMode';
 const ThemeMode = () => {
 
     const ThemeMode = useContext(ThemeContext)
-    console.log(ThemeMode)
 
     return (
         <div className="themeMode">
