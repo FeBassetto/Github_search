@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 const MobileNavigation = () => {
 
     const mobileNavigation = document.getElementsByClassName('mobileNavigation')[0]
-    console.log(mobileNavigation)
 
     function openMenu() {
         mobileNavigation.classList?.add('mobileNavigation--open')
