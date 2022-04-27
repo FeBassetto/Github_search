@@ -50,6 +50,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const lightMode = {
     dark: '#24292F',
+    medium:'#f3f3f3',
     light: '#F6F8FA',
     background: '#ffffff',
     text: '#24292f',
@@ -58,8 +59,10 @@ export const lightMode = {
 
 export const darkMode = {
     dark: '#24292F',
+    medium:'#3c495c',
     light: '#202935',
     background: '#0D1117',
     text: '#c9d1d9',
     headerText: '#ffffff'
+
 }

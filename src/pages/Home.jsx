@@ -1,9 +1,10 @@
 import React from "react";
 import TitlePage from "../components/TitlePage/TitlePage";
 import styled from 'styled-components';
+import Search from './../components/Search/Search';
 
 const StyledHome = styled.main`
-    background-color:${props => props.theme.light};
+    background-color:${props => props.theme.background};
     padding-top:15vw;
 
     @media screen and (max-width:750px){
@@ -16,9 +17,12 @@ const Home = () => {
 
     return (
         <StyledHome>
-            <TitlePage
-                text="Pesquise um usuário do GitHub"
-            />
+            <section>
+                <TitlePage
+                    text="Pesquise um usuário do GitHub"
+                />
+                <Search />
+            </section>
         </StyledHome>
     )
 }
