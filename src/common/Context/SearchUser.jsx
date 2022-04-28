@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import api from '../Api/api'
 
 
@@ -6,20 +6,64 @@ export const ContextSearchUser = createContext()
 
 
 
-const SearchProvider = ({children}) => {
+const SearchUserProvider = ({ children }) => {
 
-    const [user, setUser] = useState([])
+    const [user, setUser] = useState('')
+    const [searchedUser, setSearchedUser] = useState([])
+    const [projects, setProjects] = useState([])
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
 
-    function searchUser(userName){
-        api.get(`/${userName}`)
-        .then(res => setUser(res.data))
-    }
+    useEffect(() => {
+        searchUser(user)
+    }, [user])
 
-    return(
-        <ContextSearchUser.Provider value={{user, searchUser}}>
+    return (
+        <ContextSearchUser.Provider
+            value={
+                {
+                    searchedUser,
+                    setUser,
+                    error,
+                    loading,
+                    projects
+                }
+            }>
+
             {children}
+
         </ContextSearchUser.Provider>
     )
-} 
 
-export default SearchProvider
+    function searchUser(userName) {
+
+
+        if (userName) {
+            setLoading(true)
+            setTimeout(() => {
+                api.get(`/${userName}`)
+                    .then(res => {
+                        setSearchedUser(res.data)
+                    })
+                    .catch(err => {
+                        setError(err)
+                        setLoading(false)
+                    })
+
+                api.get(`https://api.github.com/users/${userName}/repos`)
+                    .then(res => {
+                        setProjects(res.data)
+                        setLoading(false)
+                    })
+                    .catch(err => {
+                        setError(err)
+                        setLoading(false)
+                    })
+            }, 4000);
+        }
+    }
+}
+
+
+
+export default SearchUserProvider

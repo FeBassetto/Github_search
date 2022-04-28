@@ -2,6 +2,7 @@ import React from "react";
 import TitlePage from "../components/TitlePage/TitlePage";
 import styled from 'styled-components';
 import Search from './../components/Search/Search';
+import UserSearched from "../components/UserSearched/UserSearched";
 
 const StyledHome = styled.main`
     background-color:${props => props.theme.background};
@@ -22,6 +23,7 @@ const Home = () => {
                     text="Pesquise um usuário do GitHub"
                 />
                 <Search />
+                <UserSearched/>
             </section>
         </StyledHome>
     )

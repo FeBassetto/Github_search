@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import './Search.css'
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa'
+import { ContextSearchUser } from './../../common/Context/SearchUser';
 
 
 const StyledSearch = styled.div`
@@ -15,21 +16,25 @@ const StyledSearch = styled.div`
     }
 `
 
-const ativarInput = (e) => {
-    e.target.parentNode.firstChild.focus()
-}
 
-const searchUser = (e) => {
-    
-    if(e.key === 'Enter' || e === 'submit'){
-        
-    }
-}
 
 const Search = () => {
 
 
     const [searchValue, setSearchValue] = useState('')
+
+    const userContext = useContext(ContextSearchUser)
+
+    const ativarInput = (e) => {
+        e.target.parentNode.firstChild.focus()
+    }
+
+    const searchUser = (e) => {
+
+        if (e.key === 'Enter' || e === 'submit') {
+            userContext.setUser(searchValue)
+        }
+    }
 
     return (
         <StyledSearch className="search">
@@ -49,11 +54,11 @@ const Search = () => {
                 Insira o nome do Usuário
             </label>
 
-            <FaSearch 
-            className="search__icon" 
-            id="search__icon"
-            onClick={_ => searchUser('submit')}
-             />
+            <FaSearch
+                className="search__icon"
+                id="search__icon"
+                onClick={_ => searchUser('submit')}
+            />
         </StyledSearch>
     )
 }

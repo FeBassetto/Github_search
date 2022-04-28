@@ -1,0 +1,70 @@
+.userBoxInfo__bottom {
+    height: 40vw;
+    width: 100%;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+
+    animation: showContent 2s linear;
+}
+
+.userBoxInfo__titleProject {
+    font-size: 5vw;
+
+    text-align: center;
+
+    font-family: RobotoBold;
+}
+
+.userBoxInfo__projects {
+    height: 70%;
+    width: 90%;
+
+    display: flex;
+    align-items: center;
+    align-self: center;
+
+    overflow-x: scroll;
+}
+
+.userBoxInfo__projects::-webkit-scrollbar {
+    display: flex;
+    width: 100%;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.userBoxInfo__projects:hover::-webkit-scrollbar {
+    cursor: grab;
+}
+
+.userBoxInfo__projects::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+}
+
+@media screen and (max-width:1400px) {
+    .userBoxInfo__bottom {
+        height: 50vw;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .userBoxInfo__bottom {
+        height: 60vw;
+    }
+}
+
+@media screen and (max-width:800px){
+    .userBoxInfo__bottom {
+        height: 70vw;
+    }
+}
+@media screen and (max-width:500px){
+    .userBoxInfo__bottom {
+        height: 80vw;
+    }
+}

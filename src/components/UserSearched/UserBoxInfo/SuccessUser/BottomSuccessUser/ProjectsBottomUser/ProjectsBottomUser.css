@@ -1,0 +1,111 @@
+.userBoxInfo__projectContent {
+    height: 20vw;
+    min-width: 450px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+
+    border-radius: 20px;
+
+    margin: 0 2rem;
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    gap: 2rem 0;
+
+}
+
+.userBoxInfo__projectTitle {
+    font-size: 2.5vw;
+
+    height: auto;
+    padding: 1rem;
+    text-align: left;
+
+    overflow: hidden;
+
+    font-family: InterBold;
+}
+
+.userBoxInfo__private {
+    font-size: 2vw;
+
+    padding-left: 1rem;
+
+    font-family: InterMedium;
+}
+
+.userBoxInfo__link {
+    color: rgb(72, 72, 224);
+
+    font-family: RobotoMedium;
+    font-size: 2vw;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.userBoxInfo__link:hover {
+    opacity: .7;
+}
+
+.userBoxInfo__buttonMore {
+    width: 50%;
+
+    padding: 2rem;
+    margin: 2vw auto;
+
+    box-sizing: border-box;
+
+    border-radius: 40px;
+    border: none;
+
+    font-size: 2vw;
+
+    font-family: RobotoBold;
+}
+
+.userBoxInfo__buttonMore:hover {
+    cursor: pointer;
+
+    transition: .8s;
+}
+
+@media screen and (min-width:1600px) {
+    .userBoxInfo__projectContent {
+        min-width: 30vw;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .userBoxInfo__projectContent {
+        height: 22vw;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .userBoxInfo__projectContent {
+        height: 25vw;
+    }
+
+    .userBoxInfo__projectTitle {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .userBoxInfo__projectContent {
+        height: 30vw;
+        min-width: 50vw;
+
+    }
+
+    .userBoxInfo__projectTitle {
+        font-size: 3.25vw;
+    }
+}
+
+@media screen and (max-width:1000px) {}

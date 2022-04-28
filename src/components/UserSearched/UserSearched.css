@@ -1,0 +1,56 @@
+.userSearched{
+    height: auto;
+    width: 80%;
+
+    margin: 6rem auto;
+
+    border-radius: 50px;
+}
+
+.userSearched__loading{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading__icon{
+    font-size: 8vw;
+    animation: spinnerLoading 1s linear infinite;
+}
+
+@keyframes spinnerLoading{
+    
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.userSearched__notFound{
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 3vw;
+    font-family: InterMedium;
+}
+
+.userSearched__info{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width:800px){
+    .userSearched{
+        width: 95%;
+    }
+}
