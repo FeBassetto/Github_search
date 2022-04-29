@@ -7,19 +7,21 @@ import { Link } from 'react-router-dom';
 
 const MobileNavigation = () => {
 
-    const mobileNavigation = document.getElementsByClassName('mobileNavigation')[0]
+    
 
     function openMenu() {
+        const mobileNavigation = document.getElementsByClassName('mobileNavigation')[0]
         mobileNavigation.classList?.add('mobileNavigation--open')
         mobileNavigation.classList?.remove('mobileNavigation--closed')
     }
 
     function closeMenu() {
+        const mobileNavigation = document.getElementsByClassName('mobileNavigation')[0]
         mobileNavigation.classList?.add('mobileNavigation--closing')
         setTimeout(() => {
-            mobileNavigation.classList?.add('mobileNavigation--closed')
             mobileNavigation.classList?.remove('mobileNavigation--closing')
             mobileNavigation.classList?.remove('mobileNavigation--open')
+            mobileNavigation.classList?.add('mobileNavigation--closed')
         }, 400)
     }
 

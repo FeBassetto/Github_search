@@ -60,3 +60,44 @@
     align-self: flex-start;
     text-align: left;
 }
+
+@media screen and (max-width:800px) {
+    .userBoxInfo__top{
+        height: 145vw;
+
+        grid-template-areas:
+        "image"
+        "name"
+        "nickname"
+    ;
+
+    justify-content: center;
+
+}
+
+
+    .userBoxInfo__image{
+        width: 85vw;
+        height: 85vw;
+        justify-self: center;
+    }
+    .userBoxInfo__name{
+        font-size: 10vw;
+        text-align: center;
+
+        justify-self: center;
+        align-self: flex-start;
+
+        width: 100%;
+    }
+
+    .userBoxInfo__nickName{
+        font-size: 7vw;
+
+        text-align: center;
+        justify-self: center;
+        align-self: flex-start; 
+
+        margin-top: -14vw;
+    }
+}

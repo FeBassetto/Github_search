@@ -2,6 +2,7 @@ import React from "react";
 import './BottomSuccessUser.css'
 import styled from 'styled-components';
 import ProjectsBottomUser from "./ProjectsBottomUser/ProjectsBottomUser";
+import { Link } from "react-router-dom";
 
 const StyledTitleProjects = styled.h1`
     color:${props => props.theme.text}
@@ -28,7 +29,7 @@ const StyledButtonMore = styled.button`
     }
 `
 
-const BottomSuccess = ({context}) => {
+const BottomSuccess = ({ context }) => {
 
     const projects = context.projects
 
@@ -45,12 +46,14 @@ const BottomSuccess = ({context}) => {
                 <ProjectsBottomUser
                     projects={projects}
                 />
-                
+
             </StyledProjects>
 
-            <StyledButtonMore className="userBoxInfo__buttonMore">
-                Veja mais projetos
-            </StyledButtonMore>
+            <Link to="/projects" className="userBoxInfo__linkButton">
+                <StyledButtonMore className="userBoxInfo__buttonMore">
+                    Veja mais projetos
+                </StyledButtonMore>
+            </Link>
         </div>
     )
 }

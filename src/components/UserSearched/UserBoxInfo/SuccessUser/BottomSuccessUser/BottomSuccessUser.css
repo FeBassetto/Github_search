@@ -33,7 +33,7 @@
 
 .userBoxInfo__projects::-webkit-scrollbar {
     display: flex;
-    width: 100%;
+    width: 70%;
     height: 25px;
     border-radius: 20px;
 }
@@ -45,26 +45,52 @@
 .userBoxInfo__projects::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
-
-@media screen and (max-width:1400px) {
-    .userBoxInfo__bottom {
-        height: 50vw;
-    }
+.userBoxInfo__projects:hover::-webkit-scrollbar-thumb {
+    cursor: pointer;
 }
 
-@media screen and (max-width:1000px){
-    .userBoxInfo__bottom {
-        height: 60vw;
-    }
+.userBoxInfo__linkButton{
+    text-decoration: none;
+    color: inherit;
+
+    width: auto;
+    margin: auto;
+
+    border-radius: 20px;
 }
 
-@media screen and (max-width:800px){
-    .userBoxInfo__bottom {
-        height: 70vw;
+.userBoxInfo__linkButton:hover{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+@media screen and (max-width:1300px) {
+    .userBoxInfo__bottom{
+        height: 550px;
+    }
+    .userBoxInfo__projects{
+        width: 100%;
+    }
+
+
+}
+@media screen and (max-width:800px) {
+    .userBoxInfo__titleProject{
+        font-size: 12vw;
+    }
+
+    .userBoxInfo__bottom{
+        height: 700px;
     }
 }
-@media screen and (max-width:500px){
-    .userBoxInfo__bottom {
-        height: 80vw;
+@media screen and (max-width:600px) {
+    .userBoxInfo__titleProject{
+        margin-bottom: -2rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .userBoxInfo__titleProject{
+        margin-bottom: -4rem;
     }
 }
