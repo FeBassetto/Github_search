@@ -1,0 +1,33 @@
+.errorContent {
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorContent__text {
+    font-size: 5vw;
+
+    font-family: RobotoBold;
+
+    padding: 2rem;
+
+    border-radius: 50px;
+}
+
+@media screen and (max-width:900px) {
+    .errorContent {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .errorContent {
+        height: 150px;
+    }
+
+    .errorContent__text {
+        padding: 1rem;
+    }
+}

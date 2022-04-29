@@ -43,20 +43,24 @@ const SearchUserProvider = ({ children }) => {
             setTimeout(() => {
                 api.get(`/${userName}`)
                     .then(res => {
+                        setError('')
                         setSearchedUser(res.data)
                     })
                     .catch(err => {
                         setError(err)
+                        setSearchedUser([])
                         setLoading(false)
                     })
 
                 api.get(`https://api.github.com/users/${userName}/repos`)
                     .then(res => {
+                        setError('')
                         setProjects(res.data)
                         setLoading(false)
                     })
                     .catch(err => {
                         setError(err)
+                        setSearchedUser([])
                         setLoading(false)
                     })
             }, 4000);

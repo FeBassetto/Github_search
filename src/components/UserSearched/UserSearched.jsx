@@ -28,14 +28,14 @@ const UserSearched = () => {
                     <VscLoading className="loading__icon" />
                 </StyledLoading>
             )}
-            {!(userContext.loading) && !(userContext.searchedUser.login) && (
+            {!(userContext.loading) && (!userContext.searchedUser.login && !userContext.error) && (
                 <StyledNotFound className="userSearched__notFound">
                     Nenhum usuário foi pesquisado!
                 </StyledNotFound>
             )}
-            {!(userContext.loading) && (userContext.searchedUser.login || userContext.searchedUser.error) && (
+            {!(userContext.loading) && (userContext.searchedUser.login || userContext.error) && (
                 <StyledLoading className="userSearched__info">
-                    <UserBoxInfo/>
+                    <UserBoxInfo context={userContext} />
                 </StyledLoading>
             )}
         </StyledUserSearched>

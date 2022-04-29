@@ -49,8 +49,35 @@
     height: 100%;
 }
 
+@media screen and (max-width:1000px){
+    .userSearched__notFound{
+        height: 200px;
+        font-size: 4vw;
+    }
+}
+
 @media screen and (max-width:800px){
     .userSearched{
         width: 99%;
+    }
+
+    .userSearched__notFound{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .userSearched__notFound{
+        height: 300px;
+        font-size: 8vw;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .userSearched__notFound{
+        height: 200px;
+        font-size: 8vw;
+        text-align: center;
     }
 }

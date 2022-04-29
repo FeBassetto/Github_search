@@ -54,7 +54,10 @@ export const lightMode = {
     light: '#F6F8FA',
     background: '#ffffff',
     text: '#24292f',
-    headerText: '#ffffff'
+    headerText: '#ffffff',
+    errorText:'#ff3131',
+    errorBackground:'#ff9f9f',
+    errorShadow:'#ff7f7f'
 }
 
 export const darkMode = {
@@ -63,6 +66,9 @@ export const darkMode = {
     light: '#202935',
     background: '#0D1117',
     text: '#c9d1d9',
-    headerText: '#ffffff'
+    headerText: '#ffffff',
+    errorText:'#1d0303',
+    errorBackground:'#3d01017e',
+    errorShadow:'#160000'
 
 }
