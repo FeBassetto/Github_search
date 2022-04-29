@@ -11,7 +11,7 @@ const SearchUserProvider = ({ children }) => {
     const [user, setUser] = useState('')
     const [searchedUser, setSearchedUser] = useState([])
     const [projects, setProjects] = useState([])
-    const [error, setError] = useState('')
+    const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
@@ -43,23 +43,23 @@ const SearchUserProvider = ({ children }) => {
             setTimeout(() => {
                 api.get(`/${userName}`)
                     .then(res => {
-                        setError('')
+                        setError(false)
                         setSearchedUser(res.data)
                     })
                     .catch(err => {
-                        setError(err)
+                        setError(true)
                         setSearchedUser([])
                         setLoading(false)
                     })
 
                 api.get(`https://api.github.com/users/${userName}/repos`)
                     .then(res => {
-                        setError('')
+                        setError(false)
                         setProjects(res.data)
                         setLoading(false)
                     })
                     .catch(err => {
-                        setError(err)
+                        setError(true)
                         setSearchedUser([])
                         setLoading(false)
                     })

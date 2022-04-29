@@ -1,0 +1,70 @@
+.projectsBox__left{
+    width: 80%;
+}
+
+.projectsBox__title{
+    font-size: 5vw;
+    font-family: InterBold;
+
+    height:40%;
+    width: 100%;
+}
+
+.projectsBox__description{
+    font-size: 2vw;
+    font-family: InterLight;
+
+    height: 45%;
+    width: 80%;
+
+    padding-top: 1vw;
+
+    box-sizing: border-box;
+}
+
+.projectsBox__private{
+    font-size: 2vw;
+    font-family: InterMedium;
+}
+
+@media screen and (max-width:800px){
+    .projectsBox__left{
+        height: auto;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem 0;
+    }
+
+    .projectsBox__title{
+        display: flex;
+        justify-content: center;
+    }
+
+    .projectsBox__description{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+
+        text-align: center;
+
+        font-size: 3vw;
+    }
+
+    .projectsBox__private{
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .projectsBox__title{
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .projectsBox__description{
+        font-size: 5vw;
+    }
+}

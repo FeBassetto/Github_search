@@ -1,0 +1,102 @@
+.rightProjects{
+    width: 20%;
+}
+
+.rightProjects__language{
+    font-size: 1.5vw;
+    font-family: InterBold;
+
+    text-align: center;
+}
+
+.rightProjects__icon{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 50%;
+}
+
+.rightProjects__icon svg{
+    font-size: 5vw;
+}
+
+.rightProjects__url{
+    height: 50%;
+    width: 100%;
+
+    font-size: 2vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+}
+
+.rightProjects__url a{
+    color: #4848e0;
+    font-family: RobotoBold;
+}
+
+@media screen and (max-width:800px){
+    .rightProjects{
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        width: 100%;
+        margin: auto;
+
+        padding-top: 2rem;
+    }
+
+    .rightProjects__language{
+        width: 50vw;
+        height: 6vw;
+
+        grid-column: span 1;
+
+        font-size: 3vw;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .rightProjects__icon{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        height: 6vw;
+
+        padding-left: 1rem;
+    }
+
+    .rightProjects__url{
+        display: flex;
+        justify-content: center;
+
+        grid-column: span 2;
+
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .rightProjects__url a{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .rightProjects__language{
+        font-size: 5vw;
+        width: 60vw;
+    }
+
+    .rightProjects__url a{
+        font-size: 4vw;
+    }
+
+}

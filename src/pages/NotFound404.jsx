@@ -5,9 +5,11 @@ import NotFoundContent from "../components/NotFoundContent/NotFoundContent";
 
 const NotFound404 = () => {
 
-    return(
+    window.scrollTo(0, 0)
+
+    return (
         <>
-            <NotFoundContent/>
+            <NotFoundContent />
         </>
     )
 }

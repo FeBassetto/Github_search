@@ -1,38 +1,38 @@
-.projectsBox{
-    height: 300px;
+.projectsBox {
+    height: 16vw;
     width: 90%;
 
-    padding: 2rem;
+    padding: 2vw 3vw;
+
+    margin: auto;
 
     box-sizing: border-box;
 
-    margin: 2vw auto;
-
     display: flex;
     flex-direction: row;
+
+    border-radius: 40px;
 }
 
-.projectsBox__right{
-    width: 60%;
+.projectsBox:not(:last-child) {
+    margin-bottom: 4vw;
 }
 
-.projectsBox__title{
-    font-size: 4vw;
-    font-family: InterBold;
+@media screen and (max-width:800px) {
+    .projectsBox {
+        flex-direction: column;
+        height: auto;
 
-    height: 35%;
-    width: 100%;
+        padding: 2.25rem;
+    }
+
+    .projectsBox:not(:last-child) {
+        margin-bottom: 8vw;
+    }
 }
 
-.projectsBox__description{
-    font-size: 3vw;
-    font-family: InterLight;
-
-    height: 50%;
-    width: 100%;
-}
-
-.projectsBox__private{
-    font-size: 2vw;
-    font-family: InterMedium;
+@media screen and (max-width:470px){
+    .projectsBox{
+        width: 98%;
+    }
 }

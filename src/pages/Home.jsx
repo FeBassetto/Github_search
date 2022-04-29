@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import TitlePage from "../components/TitlePage/TitlePage";
 import styled from 'styled-components';
 import Search from './../components/Search/Search';
 import UserSearched from "../components/UserSearched/UserSearched";
+import { ContextSearchUser } from './../common/Context/SearchUser';
 
 const StyledHome = styled.main`
     background-color:${props => props.theme.background};
@@ -26,7 +27,7 @@ const Home = () => {
                     text="Pesquise um usuário do GitHub"
                 />
                 <Search />
-                <UserSearched/>
+                <UserSearched />
             </section>
         </StyledHome>
     )

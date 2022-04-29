@@ -1,5 +1,24 @@
 .projectsContent{
     min-height: 80vh;
 
-    padding-top: 10vw;
+    padding: 10vw 0;
+}
+
+.titleProjects{
+    font-size: 9vw;
+    font-family: RobotoBold;
+
+    text-align: center;
+
+    width: 70%;
+
+    margin: auto;
+
+    padding: 6vw;
+}  
+
+@media screen and (max-width:800px){
+    .projectsContent{
+        padding: 6rem 0;
+    }
 }

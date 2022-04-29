@@ -8,12 +8,19 @@ const StyledProjectsContent = styled.section`
     background-color:${props => props.theme.background}
 `
 
+const StyledTitleProjects = styled.h1`
+    color:${props => props.theme.text}
+`
+
 const ProjectsContent = () => {
 
     const context = useContext(ContextSearchUser)
 
     return(
         <StyledProjectsContent className="projectsContent">
+            <StyledTitleProjects className="titleProjects">
+                Projetos do usuário
+            </StyledTitleProjects>
             <ProjectsBox context={context} />
         </StyledProjectsContent>
     )
