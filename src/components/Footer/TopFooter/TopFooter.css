@@ -1,0 +1,42 @@
+.topFooter{
+    color: inherit;
+
+    height: 60%;
+    width: 100%;
+
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border-bottom: 2px solid #ffffff;
+}
+
+.topFooter > *:first-child:hover{
+    opacity: .7;
+}
+
+.footerNavigation{
+    padding: 0 5vw;
+    width: 60%;
+}
+
+.footerList{
+    display: flex;
+    flex-direction: row;
+    gap: 0 4vw;
+}
+
+.footerItem a{
+    text-decoration: none;
+    color: inherit;
+
+    font-size: 2vw;
+    font-family: RobotoBold;
+}
+
+.footerItem a:hover{
+    opacity: .7;
+}

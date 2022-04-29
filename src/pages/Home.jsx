@@ -7,6 +7,9 @@ import UserSearched from "../components/UserSearched/UserSearched";
 const StyledHome = styled.main`
     background-color:${props => props.theme.background};
     padding-top:15vw;
+    padding-bottom:15vw;
+    min-height:100vh;
+    box-sizing:border-box;
 
     @media screen and (max-width:750px){
         padding-top:7rem;
