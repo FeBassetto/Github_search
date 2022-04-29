@@ -1,0 +1,15 @@
+.notFoundContent {
+    padding-top: 10vw;
+    min-height: 80vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notFoundContent__text{
+    font-size: 5vw;
+    font-family: RobotoBold;
+
+    padding-top: 3vw;
+}
