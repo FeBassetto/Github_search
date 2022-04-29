@@ -10,3 +10,16 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media screen and (max-width:1000px) {
+    .footer{
+        height: 23vw;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .footer{
+        height: auto;
+        padding: 1rem 0;
+    }
+}

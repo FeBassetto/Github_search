@@ -2,6 +2,7 @@ import React from "react";
 import './Footer.css'
 import styled from 'styled-components';
 import TopFooter from "./TopFooter/TopFooter";
+import BottomFooter from "./BottomFooter/BottomFooter";
 
 const StyledFooter = styled.footer`
     color:${props => props.theme.headerText};
@@ -14,6 +15,7 @@ const Footer = () => {
     return(
         <StyledFooter className="footer">
             <TopFooter/>
+            <BottomFooter/>
         </StyledFooter>
     )
 }
