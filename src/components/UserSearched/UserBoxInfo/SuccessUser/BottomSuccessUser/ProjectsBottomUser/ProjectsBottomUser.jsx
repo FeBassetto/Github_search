@@ -20,7 +20,10 @@ const ProjectsBottomUser = ({ projects }) => {
                     >
 
                         <h1 className="userBoxInfo__projectTitle">
-                            {project.name}
+                            {project.name.length > 23 ? 
+                                project.name.substr(0,23).padEnd(26, '.'):
+                                project.name
+                            }
                         </h1>
                         {project.private ?
                             <h2 className="userBoxInfo__private">

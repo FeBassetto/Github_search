@@ -3,11 +3,11 @@ import './NotFoundContent.css'
 import styled from 'styled-components';
 import Logo from "../Header/Logo/Logo";
 
-const StyledNotFoundContent = styled.section`
+const StyledNotFoundContent = styled.main`
     background-color:${props => props.theme.background};
 `
 
-const StyledError = styled.div`
+const StyledError = styled.section`
     color:${props => props.theme.dark};
 `
 

@@ -49,7 +49,7 @@ const BottomSuccess = ({ context }) => {
 
             </StyledProjects>
 
-            <Link to="/projects" className="userBoxInfo__linkButton">
+            <Link to="/projetos" className="userBoxInfo__linkButton">
                 <StyledButtonMore className="userBoxInfo__buttonMore">
                     Veja mais projetos
                 </StyledButtonMore>

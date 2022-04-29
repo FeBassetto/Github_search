@@ -1,0 +1,38 @@
+.projectsBox{
+    height: 300px;
+    width: 90%;
+
+    padding: 2rem;
+
+    box-sizing: border-box;
+
+    margin: 2vw auto;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.projectsBox__right{
+    width: 60%;
+}
+
+.projectsBox__title{
+    font-size: 4vw;
+    font-family: InterBold;
+
+    height: 35%;
+    width: 100%;
+}
+
+.projectsBox__description{
+    font-size: 3vw;
+    font-family: InterLight;
+
+    height: 50%;
+    width: 100%;
+}
+
+.projectsBox__private{
+    font-size: 2vw;
+    font-family: InterMedium;
+}
