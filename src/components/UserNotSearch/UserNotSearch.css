@@ -1,0 +1,30 @@
+.userNotSearched{
+    min-height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.userNotSearched__titleSearch{
+    font-size: 5vw;
+    font-family: RobotoBold;
+}
+
+.userNotSearched__buttonSearch{
+    margin-top: 2rem;
+    padding: 2rem;
+
+    font-size: 2vw;
+    font-family: InterBold;
+
+    border-radius: 30px;
+
+    transition: 1s;
+}
+
+.userNotSearched__buttonSearch:hover{
+    opacity: .8;
+    cursor: pointer;
+}

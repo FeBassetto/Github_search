@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import NotFound404 from "./pages/NotFound404";
 import Projects from './pages/Projects';
 import { ContextSearchUser } from './common/Context/SearchUser';
+import Details from "./pages/Details";
 
 
 const Routing = () => {
@@ -20,6 +21,7 @@ const Routing = () => {
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route path="/projetos" element={projectPage} />
+                <Route path="/detalhes" element={<Details/>} />
                 <Route path="*" element={<NotFound404 />} />
             </Routes>
             <Footer />
