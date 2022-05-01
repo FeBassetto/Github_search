@@ -26,6 +26,20 @@
     ;
 }
 
+.detailsContent > *{
+    animation: 1s linear showDetails;
+}
+
+@keyframes showDetails {
+    from{
+        opacity: .2;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
 .detailsContent__image{
     grid-area: image;
 

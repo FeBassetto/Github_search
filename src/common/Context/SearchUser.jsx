@@ -40,6 +40,7 @@ const SearchUserProvider = ({ children }) => {
 
         if (userName) {
             setLoading(true)
+            setSearchedUser([])
             setTimeout(() => {
                 api.get(`/${userName}`)
                     .then(res => {
