@@ -1,3 +1,71 @@
 .detailsContent{
     min-height: 80vh;
+    width: 100%;
+
+    padding: 10vw 2rem;
+
+    box-sizing: border-box;
+
+    margin: auto;
+
+
+    display: grid;
+    grid-template-areas: 
+    "image name"
+    "image login"
+    "initDate totDate"
+    "company location"
+    "followers following"
+    ;
+    
+}
+
+.detailsContent__image{
+    grid-area: image;
+
+    width: 30vw;
+    border-radius: 50%;
+
+    box-sizing: cover;
+}
+
+.detailsContent__name{
+    grid-area: name;
+
+    width: 50vw;
+    align-self: flex-end;
+
+    font-size: 4vw;
+    font-family: InterBold;
+}
+
+.detailsContent__login{
+    grid-area: login;
+
+    font-size: 3vw;
+    font-family: InterMedium;
+}
+
+.detailsContent__initDate{
+    grid-area: initDate;
+}
+
+.detailsContent__totDate{
+    grid-area: totDate;
+}
+
+.detailsContent__company{
+    grid-area: company;
+}
+
+.detailsContent__location{
+    grid-area: location;
+}
+
+.detailsContent__followers{
+    grid-area: followers;
+}
+
+.detailsContent__following{
+    grid-area: following;
 }
