@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import { MdOutlineHomeRepairService, MdCalendarToday, MdLocationOn } from 'react-icons/md'
 import { BsGithub } from 'react-icons/bs'
 import { AiOutlineUser } from 'react-icons/ai'
+import { RiGitRepositoryCommitsFill } from 'react-icons/ri'
+import { VscAccount } from 'react-icons/vsc'
 
 
 const StyledDetailsContent = styled.main`
@@ -67,6 +69,14 @@ const DetailsContent = ({ context }) => {
                     Localidade: {context.location} <MdLocationOn />
                 </p>
 
+                <p className="detailsContent__publicRepo detailsContent__info">
+                    Projetos públicos: {context.public_repos} <RiGitRepositoryCommitsFill />
+                </p>
+
+                <p className="detailsContent__type detailsContent__info">
+                    Tipo usuário: {context.type} <VscAccount />
+                </p>
+
                 <p className="detailsContent__followers detailsContent__info">
                     Seguidores: {context.followers} <AiOutlineUser />
                 </p>
@@ -74,6 +84,8 @@ const DetailsContent = ({ context }) => {
                 <p className="detailsContent__following detailsContent__info">
                     Seguindo: {context.following} <AiOutlineUser />
                 </p>
+
+
             </StyledSection>
 
         </StyledDetailsContent>

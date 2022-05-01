@@ -21,6 +21,7 @@
     "image login"
     "initDate totDate"
     "company location"
+    "publicRepo type"
     "followers following"
     ;
 }
@@ -67,6 +68,14 @@
     grid-area: location;
 }
 
+.detailsContent__publicRepo{
+    grid-area: publicRepo;
+}
+
+.detailsContent__type{
+    grid-area: type;
+}
+
 .detailsContent__followers{
     grid-area: followers;
 }
@@ -74,6 +83,7 @@
 .detailsContent__following{
     grid-area: following;
 }
+
 
 .detailsContent__info{
     display: flex;
@@ -85,4 +95,8 @@
     font-size: 2vw;
 
     font-family: InterMedium;
+}
+
+.detailsContent__info svg {
+    margin-left: .5rem;
 }
