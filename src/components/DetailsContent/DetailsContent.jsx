@@ -1,10 +1,20 @@
 import React from "react";
 import './DetailsContent.css'
 import styled from 'styled-components'
+import { MdOutlineHomeRepairService, MdCalendarToday, MdLocationOn } from 'react-icons/md'
+import { BsGithub } from 'react-icons/bs'
+import { AiOutlineUser } from 'react-icons/ai'
+
 
 const StyledDetailsContent = styled.main`
+    background-color:${props => props.theme.background};
+    color:${props => props.theme.text};
+`
+
+const StyledSection = styled.section`
     background-color:${props => props.theme.light};
     color:${props => props.theme.text};
+    box-shadow: 0px 0px .5rem ${props => props.theme.text}
 `
 
 const DetailsContent = ({ context }) => {
@@ -26,11 +36,11 @@ const DetailsContent = ({ context }) => {
     return (
         <StyledDetailsContent className="detailsContent">
 
-            <section>
+            <StyledSection className="detailsContent__section">
                 <img
                     src={context.avatar_url}
                     alt="Imagem do usuário"
-                    className="detailsContent__image"
+                    className="detailsContent__image detailsContent__info"
                 />
 
                 <h1 className="detailsContent__name">
@@ -41,30 +51,30 @@ const DetailsContent = ({ context }) => {
                     {context.login}
                 </h2>
 
-                <p className="detailsContent__initDate">
-                    Data de início: {date}/{month}/{year}
+                <p className="detailsContent__initDate detailsContent__info">
+                    Data de início: {date}/{month}/{year} <MdCalendarToday />
                 </p>
 
-                <p className="detailsContent__totDate">
-                    Dias de GitHub: {parseInt(daysDiff)}
+                <p className="detailsContent__totDate detailsContent__info">
+                    Tempo total de GitHub: {parseInt(daysDiff)} {daysDiff < 2 ? 'dia' : 'dias'} <BsGithub />
                 </p>
 
-                <p className="detailsContent__company">
-                    Empresa: {context.company}
+                <p className="detailsContent__company detailsContent__info">
+                    Empresa: {context.company} <MdOutlineHomeRepairService />
                 </p>
 
-                <p className="detailsContent__location">
-                    Localidade: {context.location}
+                <p className="detailsContent__location detailsContent__info">
+                    Localidade: {context.location} <MdLocationOn />
                 </p>
 
-                <p className="detailsContent__followers">
-                    Seguidores: {context.followers}
+                <p className="detailsContent__followers detailsContent__info">
+                    Seguidores: {context.followers} <AiOutlineUser />
                 </p>
 
-                <p className="detailsContent__following">
-                    Seguindo: {context.following}
+                <p className="detailsContent__following detailsContent__info">
+                    Seguindo: {context.following} <AiOutlineUser />
                 </p>
-            </section>
+            </StyledSection>
 
         </StyledDetailsContent>
     )
