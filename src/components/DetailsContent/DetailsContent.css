@@ -100,3 +100,53 @@
 .detailsContent__info svg {
     margin-left: .5rem;
 }
+
+@media screen and (max-width:700px) {
+    .detailsContent{
+        padding: 8rem 0;
+    }
+}
+
+@media screen and (max-width:450px){
+    .detailsContent__section{
+        grid-template-areas: 
+    "image "
+    "name"
+    "login"
+    "initDate"
+    "totDate"
+    "company"
+    "location"
+    "publicRepo "
+    "type"
+    "followers"
+    "following"
+    ;
+
+    justify-content: center;
+
+    gap: 1rem;
+    }
+
+    .detailsContent__image{
+        width: 70vw;
+    }
+
+    .detailsContent__name{
+        text-align: center;
+
+        width: 100%;
+
+        font-size: 7vw;
+    }
+
+    .detailsContent__login{
+        text-align: center;
+
+        font-size: 5vw;
+    }
+
+    .detailsContent__info{
+        font-size: 3.5vw;
+    }
+}

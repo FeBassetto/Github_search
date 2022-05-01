@@ -28,3 +28,13 @@
     opacity: .8;
     cursor: pointer;
 }
+
+@media screen and (max-width:500px) {
+    .userNotSearched__buttonSearch{
+        font-size: 4vw;
+    }
+
+    .userNotSearched__titleSearch{
+        font-size: 6vw;
+    }
+}
