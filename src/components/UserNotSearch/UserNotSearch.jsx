@@ -17,14 +17,14 @@ const ButtonNotSearch = styled.button`
     box-shadow: 0px 0px .4rem ${props => props.theme.text};
 `
 
-const UserNotSearch = () => {
+const UserNotSearch = ({text}) => {
 
 
 
     return (
         <MainNotSearch className="userNotSearched">
             <TitleNotSearch className="userNotSearched__titleSearch">
-                Nenhum usuário foi pesquisado
+                {text}
             </TitleNotSearch>
             <Link to="/">
                 <ButtonNotSearch className="userNotSearched__buttonSearch">

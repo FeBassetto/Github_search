@@ -1,5 +1,5 @@
 .loading{
-    animation: 2s linear infinite loader;
+    animation: 1s linear infinite loader;
 
     font-size: 8vw;
     color: inherit;

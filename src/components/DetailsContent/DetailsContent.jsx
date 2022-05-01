@@ -6,6 +6,7 @@ import { BsGithub } from 'react-icons/bs'
 import { AiOutlineUser } from 'react-icons/ai'
 import { RiGitRepositoryCommitsFill } from 'react-icons/ri'
 import { VscAccount } from 'react-icons/vsc'
+import Search from './../Search/Search';
 
 
 const StyledDetailsContent = styled.main`
@@ -39,6 +40,7 @@ const DetailsContent = ({ context }) => {
         <StyledDetailsContent className="detailsContent">
 
             <StyledSection className="detailsContent__section">
+
                 <img
                     src={context.avatar_url}
                     alt="Imagem do usuário"
@@ -62,11 +64,11 @@ const DetailsContent = ({ context }) => {
                 </p>
 
                 <p className="detailsContent__company detailsContent__info">
-                    Empresa: {context.company} <MdOutlineHomeRepairService />
+                    Empresa: {context.company ? context.company: 'Nenhuma'} <MdOutlineHomeRepairService />
                 </p>
 
                 <p className="detailsContent__location detailsContent__info">
-                    Localidade: {context.location} <MdLocationOn />
+                    Localidade: {context.location ? context.location : 'Não informado'} <MdLocationOn />
                 </p>
 
                 <p className="detailsContent__publicRepo detailsContent__info">
@@ -74,7 +76,7 @@ const DetailsContent = ({ context }) => {
                 </p>
 
                 <p className="detailsContent__type detailsContent__info">
-                    Tipo usuário: {context.type} <VscAccount />
+                    Tipo do usuário: {context.type} <VscAccount />
                 </p>
 
                 <p className="detailsContent__followers detailsContent__info">

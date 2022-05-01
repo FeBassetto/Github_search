@@ -18,8 +18,16 @@ const Details = () => {
                 <Loading />
             )}
 
-            {!context.searchedUser.name && !context.loading && (
-                <UserNotSearch />
+            {context.error && !context.loading && (
+                <UserNotSearch 
+                    text="Usuário pesquisado não encontrado"
+                />
+            )}
+
+            {!context.searchedUser.name && !context.loading && !context.error && (
+                <UserNotSearch 
+                    text="Nenhum usuário foi pesquisado"
+                />
             )}
 
             {context.searchedUser.name && (
