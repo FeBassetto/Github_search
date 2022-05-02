@@ -8,7 +8,7 @@ import MobileNavigation from "./MobileNavigation/MobileNavigation";
 
 const StyledHeader = styled.header`
     background-color:${props => props.theme.dark};
-    box-shadow: 0px 0px .3rem ${props => props.theme.text} ;
+    box-shadow: 0px 3px .3rem ${props => props.theme.text} ;
 
     && > *{
         color:${props => props.theme.headerText};

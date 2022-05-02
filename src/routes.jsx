@@ -14,19 +14,19 @@ const Routing = () => {
 
     const context = useContext(ContextSearchUser)
 
-    const projectPage = context.projects.length !== 0 ? <Projects/> : <NotFound404 />
+    const projectPage = context.projects.length !== 0 ? <Projects /> : <NotFound404 />
 
     return (
         <Router>
-            <Header />
-            <Routes>
-                <Route exact path="/" element={<Home />} />
-                <Route path="/projetos" element={projectPage} />
-                <Route path="/detalhes" element={<Details/>} />
-                <Route path="/favoritos" element={<StarredRepo/>} />
-                <Route path="*" element={<NotFound404 />} />
-            </Routes>
-            <Footer />
+                <Header />
+                <Routes>
+                    <Route exact path="/" element={<Home />} />
+                    <Route path="/projetos" element={projectPage} />
+                    <Route path="/detalhes" element={<Details />} />
+                    <Route path="/favoritos" element={<StarredRepo />} />
+                    <Route path="*" element={<NotFound404 />} />
+                </Routes>
+                <Footer />
         </Router>
     )
 }

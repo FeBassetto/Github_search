@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Routing from './routes';
 import { darkMode, GlobalStyle, lightMode } from './theme';
-import { ThemeContext, ThemeModeProvider } from './common/Context/ContextThemeMode';
+import { ThemeContext } from './common/Context/ContextThemeMode';
 
 function App() {
 
