@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import { ContextSearchUser } from './common/Context/SearchUser';
 import Details from "./pages/Details";
 import StarredRepo from './pages/StarredRepo';
+import FullProject from "./pages/FullProject";
 
 
 const Routing = () => {
@@ -15,15 +16,17 @@ const Routing = () => {
     const context = useContext(ContextSearchUser)
 
     const projectPage = context.projects.length !== 0 ? <Projects /> : <NotFound404 />
+    const fullProjectPage = context.projects.length !== 0 ? <FullProject /> : <NotFound404 />
 
     return (
         <Router>
                 <Header />
                 <Routes>
                     <Route exact path="/" element={<Home />} />
-                    <Route path="/projetos" element={projectPage} />
+                    <Route exact path="/projetos" element={projectPage} />
                     <Route path="/detalhes" element={<Details />} />
                     <Route path="/favoritos" element={<StarredRepo />} />
+                    <Route path="/projetos/:projectId" element={fullProjectPage} />
                     <Route path="*" element={<NotFound404 />} />
                 </Routes>
                 <Footer />

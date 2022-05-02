@@ -2,6 +2,7 @@ import React from "react";
 import './RightProjects.css'
 import styled from 'styled-components';
 import languagesIcons from './../../../../common/Js/LanguageIcons/LanguageIcons';
+import { Link } from 'react-router-dom';
 
 const StyledRightBox = styled.div`
     color:${props => props.theme.text}
@@ -26,9 +27,9 @@ const RightProjects = ({ project }) => {
                 {languagesIcons[languageIcon]}
             </p>
             <div className="rightProjects__url">
-                <a href={`${project.html_url}`}>
+                <Link to={`${project.name}`}>
                     Link
-                </a>
+                </Link>
             </div>
         </StyledRightBox>
     )

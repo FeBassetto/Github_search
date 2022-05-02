@@ -14,7 +14,10 @@ const LeftProjects = ({ project }) => {
         <StyledLeftBox className="projectsBox__left">
 
             <h1 className="projectsBox__title">
-                {project.name}
+                {project.name.length > 17 ? 
+                project.name.substr(0, 17).padEnd(20, '.') :
+                project.name
+                }
             </h1>
 
             <h2 className="projectsBox__description">

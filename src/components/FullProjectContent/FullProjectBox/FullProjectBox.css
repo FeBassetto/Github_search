@@ -1,0 +1,9 @@
+.fullProjectBox{
+    width: 90%;
+
+    border-radius: 30px;
+
+    padding: 2vw;
+
+    box-sizing: border-box;
+}

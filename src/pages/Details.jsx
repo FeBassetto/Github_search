@@ -24,7 +24,7 @@ const Details = () => {
                 />
             )}
 
-            {!context.searchedUser.lenght > 1 && !context.loading && !context.error && (
+            {context.searchedUser.length === 0 && !context.loading && !context.error && (
                 <UserNotSearch 
                     text="Nenhum usuário foi pesquisado"
                 />
