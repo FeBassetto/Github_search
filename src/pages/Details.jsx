@@ -24,13 +24,13 @@ const Details = () => {
                 />
             )}
 
-            {!context.searchedUser.name && !context.loading && !context.error && (
+            {!context.searchedUser.lenght > 1 && !context.loading && !context.error && (
                 <UserNotSearch 
                     text="Nenhum usuário foi pesquisado"
                 />
             )}
 
-            {context.searchedUser.name && (
+            {context.searchedUser.login && (
                 <DetailsContent context={context.searchedUser} />
             )}
         </>

@@ -51,7 +51,7 @@ const BottomSuccess = ({ context }) => {
 
             <Link to="/projetos" className="userBoxInfo__linkButton">
                 <StyledButtonMore className="userBoxInfo__buttonMore">
-                    Veja mais projetos
+                    Veja mais sobre os projetos
                 </StyledButtonMore>
             </Link>
         </div>

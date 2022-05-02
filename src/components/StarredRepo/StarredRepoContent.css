@@ -1,0 +1,184 @@
+.starredContent {
+    min-height: 80vh;
+
+    padding: 10vw 0;
+}
+
+.starredContent__starredBox {
+    width: 90%;
+
+    margin: 4vw auto;
+
+    padding: 2vw;
+
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-areas:
+        "ownerImage ownerName"
+        "projectName projectName"
+        "projectDescription projectDescription"
+        "createDate lastUpdate"
+        "stars watchers"
+        "language issue"
+    ;
+
+    gap: 2vw 0;
+
+    animation: 1s linear showStarred;
+}
+
+@keyframes showStarred {
+    0% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.starredBox__ownerName {
+    grid-area: ownerName;
+
+    font-size: 4vw;
+    font-family: RobotoBold;
+
+    width: 60vw;
+
+    align-self: center;
+}
+
+.starredBox__ownerImage {
+    grid-area: ownerImage;
+
+    width: 20vw;
+    border-radius: 50%;
+}
+
+.starredBox__projectName {
+    grid-area: projectName;
+
+    font-size: 5vw;
+    font-family: InterBold;
+
+    text-align: center;
+}
+
+.starredBox__projectDescription {
+    grid-area: projectDescription;
+
+    font-size: 3vw;
+    font-family: InterMedium;
+
+    text-align: center;
+
+    width: 70%;
+
+    justify-self: center;
+
+    padding-bottom: 3rem;
+}
+
+.starredBox__createDate {
+    grid-area: createDate;
+}
+
+.starredBox__lastUpdate {
+    grid-area: lastUpdate;
+}
+
+.starredBox__language {
+    grid-area: language;
+}
+
+.starredBox__watchers {
+    grid-area: watchers;
+}
+
+.starredBox__stars {
+    grid-area: stars;
+}
+
+.starredBox__issue {
+    grid-area: issue;
+}
+
+.starredBox__infos {
+    font-size: 2vw;
+    font-family: InterMedium;
+
+    width: 100%;
+
+    text-align: center;
+
+    width: 35vw;
+
+    justify-self: center;
+    align-self: center;
+
+    padding-bottom: 3rem;
+}
+
+@media screen and (max-width:700px) {
+    .starredContent {
+        width: 100%;
+        padding: 6rem 0;
+    }
+
+    .starredContent__starredBox {
+        width: 94%;
+
+        grid-template-areas:
+            "ownerName"
+            "ownerImage "
+            "projectName "
+            "projectDescription "
+            "lastUpdate "
+            "createDate "
+            "language "
+            "stars "
+            "watchers "
+            "issue "
+        ;
+
+        gap: 4vw;
+
+        margin-top: 4rem;
+
+        padding: 5vw;
+        box-sizing: border-box;
+
+        overflow: hidden;
+
+    }
+
+    .starredContent__starredBox>* {
+        width: 100%;
+
+        overflow: hidden;
+
+        text-align: center;
+    }
+
+    .starredBox__ownerName {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .starredBox__projectName {
+        font-size: 10vw;
+
+        text-align: center;
+    }
+
+    .starredBox__projectDescription{
+        font-size: 6vw;
+
+        padding-bottom: 2rem;
+    }
+
+    .starredBox__infos {
+        font-size: 4vw;
+    }
+}

@@ -9,8 +9,11 @@ export const ContextSearchUser = createContext()
 const SearchUserProvider = ({ children }) => {
 
     const [user, setUser] = useState('')
+
     const [searchedUser, setSearchedUser] = useState([])
     const [projects, setProjects] = useState([])
+    const [starredProjects, setStarredProjects] = useState([])
+
     const [error, setError] = useState(false)
     const [loading, setLoading] = useState(false)
 
@@ -26,7 +29,8 @@ const SearchUserProvider = ({ children }) => {
                     setUser,
                     error,
                     loading,
-                    projects
+                    projects,
+                    starredProjects
                 }
             }>
 
@@ -34,6 +38,13 @@ const SearchUserProvider = ({ children }) => {
 
         </ContextSearchUser.Provider>
     )
+
+    function catchError() {
+        setError(true)
+        setSearchedUser([])
+        setStarredProjects([])
+        setLoading(false)
+    }
 
     function searchUser(userName) {
 
@@ -48,21 +59,27 @@ const SearchUserProvider = ({ children }) => {
                         setSearchedUser(res.data)
                     })
                     .catch(err => {
-                        setError(true)
-                        setSearchedUser([])
-                        setLoading(false)
+                        catchError()
                     })
 
-                api.get(`https://api.github.com/users/${userName}/repos`)
+                api.get(`/${userName}/repos`)
                     .then(res => {
                         setError(false)
                         setProjects(res.data)
                         setLoading(false)
                     })
                     .catch(err => {
-                        setError(true)
-                        setSearchedUser([])
+                        catchError()
+                    })
+
+                api.get(`/${userName}/starred`)
+                    .then(res => {
+                        setError(false)
+                        setStarredProjects(res.data)
                         setLoading(false)
+                    })
+                    .catch(err => {
+                        catchError()
                     })
             }, 4000);
         }

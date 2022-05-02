@@ -48,7 +48,7 @@ const DetailsContent = ({ context }) => {
                 />
 
                 <h1 className="detailsContent__name">
-                    {context.name}
+                    {context.name ? context.name : 'Sem Nome'}
                 </h1>
 
                 <h2 className="detailsContent__login">

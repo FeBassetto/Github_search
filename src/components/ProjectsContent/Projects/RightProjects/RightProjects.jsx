@@ -1,24 +1,7 @@
 import React from "react";
 import './RightProjects.css'
 import styled from 'styled-components';
-import {
-
-    SiJavascript,
-    SiCsharp,
-    SiCplusplus,
-    SiCloudera,
-    SiGo,
-    SiJava,
-    SiPhp,
-    SiPython,
-    SiScala,
-    SiTypescript,
-    SiRuby,
-    SiHtml5,
-    SiCss3,
-    SiGithub
-
-} from 'react-icons/si'
+import languagesIcons from './../../../../common/Js/LanguageIcons/LanguageIcons';
 
 const StyledRightBox = styled.div`
     color:${props => props.theme.text}
@@ -27,27 +10,12 @@ const StyledRightBox = styled.div`
 
 const RightProjects = ({ project }) => {
 
-    const languagesIcons = {
-        'javascript': <SiJavascript />,
-        'c#': <SiCsharp />,
-        'c++': <SiCplusplus />,
-        'c': <SiCloudera />,
-        'go': <SiGo />,
-        'java': <SiJava />,
-        'php': <SiPhp />,
-        'python': <SiPython />,
-        'scala': <SiScala />,
-        'typescript': <SiTypescript />,
-        'ruby': <SiRuby />,
-        'html': <SiHtml5 />,
-        'css': <SiCss3 />,
-        'default': <SiGithub />
-
-    }
+    
 
 
     const language = project.language?.toLowerCase()
     const languageIcon = language === undefined ? 'default' : language
+   
 
     return (
         <StyledRightBox className="rightProjects">

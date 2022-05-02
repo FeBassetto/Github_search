@@ -7,6 +7,7 @@ import NotFound404 from "./pages/NotFound404";
 import Projects from './pages/Projects';
 import { ContextSearchUser } from './common/Context/SearchUser';
 import Details from "./pages/Details";
+import StarredRepo from './pages/StarredRepo';
 
 
 const Routing = () => {
@@ -22,6 +23,7 @@ const Routing = () => {
                 <Route exact path="/" element={<Home />} />
                 <Route path="/projetos" element={projectPage} />
                 <Route path="/detalhes" element={<Details/>} />
+                <Route path="/favoritos" element={<StarredRepo/>} />
                 <Route path="*" element={<NotFound404 />} />
             </Routes>
             <Footer />

@@ -13,7 +13,7 @@ const ProjectsBottomUser = ({ projects }) => {
     return (
         <>
             {
-                projects.map((project, i) => (
+                projects.map(project => (
 
                     <StyledProjectContent
                         className="userBoxInfo__projectContent"

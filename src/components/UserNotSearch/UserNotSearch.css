@@ -10,6 +10,8 @@
 .userNotSearched__titleSearch{
     font-size: 5vw;
     font-family: RobotoBold;
+
+    text-align: center;
 }
 
 .userNotSearched__buttonSearch{
