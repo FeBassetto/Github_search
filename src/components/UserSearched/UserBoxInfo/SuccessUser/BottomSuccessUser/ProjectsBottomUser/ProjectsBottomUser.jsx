@@ -2,6 +2,7 @@ import React from "react";
 import './ProjectsBottomUser.css'
 import { BsLockFill, BsUnlockFill } from 'react-icons/bs'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 
 const StyledProjectContent = styled.div`
     color:${props => props.theme.text};
@@ -34,9 +35,9 @@ const ProjectsBottomUser = ({ projects }) => {
                             <h2 className="userBoxInfo__private">
                                 <BsUnlockFill />Aberto
                             </h2>}
-                        <a href={project.html_url} className="userBoxInfo__link">
-                            link
-                        </a>
+                        <Link to={`/projetos/${project.name}`} className="userBoxInfo__link">
+                            Veja mais
+                        </Link>
                     </StyledProjectContent>
                 ))
             }
