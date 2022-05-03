@@ -28,7 +28,7 @@ const RightProjects = ({ project }) => {
             </p>
             <div className="rightProjects__url">
                 <Link to={`${project.name}`}>
-                    Link
+                    Veja mais
                 </Link>
             </div>
         </StyledRightBox>

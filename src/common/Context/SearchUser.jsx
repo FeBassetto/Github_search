@@ -58,7 +58,7 @@ const SearchUserProvider = ({ children }) => {
                         setError(false)
                         setSearchedUser(res.data)
                     })
-                    .catch(err => {
+                    .catch(_ => {
                         catchError()
                     })
 
@@ -68,7 +68,7 @@ const SearchUserProvider = ({ children }) => {
                         setProjects(res.data)
                         setLoading(false)
                     })
-                    .catch(err => {
+                    .catch(_ => {
                         catchError()
                     })
 
@@ -78,7 +78,7 @@ const SearchUserProvider = ({ children }) => {
                         setStarredProjects(res.data)
                         setLoading(false)
                     })
-                    .catch(err => {
+                    .catch(_ => {
                         catchError()
                     })
             }, 4000);

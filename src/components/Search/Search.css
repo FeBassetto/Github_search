@@ -128,6 +128,6 @@
 
     .search__icon{
         font-size: 6vw;
-        top: calc(50% - 3v);
+        top: calc(50% - 3vw);
     }
 }
