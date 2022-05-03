@@ -10,7 +10,7 @@ const BottomFooter = () => {
     return (
         <div className="bottomFooter">
             <p className="bottomFooter__copyright">
-                Copyright 2022 | All rights reserve | Criado por Felipe Bassetto
+                Copyright 2022 | Todos direitos reservados | Criado por Felipe Bassetto
             </p>
             <div className="bottomFooter__link">
                 <a href="https://github.com/FeBassetto">
