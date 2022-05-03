@@ -23,7 +23,7 @@ const StyledBox = styled.div`
 const FullProjectBox = ({ project }) => {
 
     const createdDate = new Date(project.created_at).getTime()
-    const updatedDate = new Date(project.updated_at).getTime()
+    const updatedDate = new Date(project.pushed_at).getTime()
     const actualDate = new Date().getTime()
 
     const diffCreatedMili = actualDate - createdDate

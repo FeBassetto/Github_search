@@ -13,6 +13,8 @@ const FullProject = () => {
 
     const thisProject = context.projects.filter(project => project.name === projectId)
 
+    console.log(thisProject)
+
     return(
         <>
             <FullProjectContent
