@@ -6,7 +6,6 @@ import RobotoRegular from './assets/fonts/Roboto/Roboto-Regular.ttf';
 import InterMedium from './assets/fonts/Inter/Inter-Medium.ttf';
 import InterLight from './assets/fonts/Inter/Inter-Light.ttf';
 import InterBold from './assets/fonts/Inter/Inter-Bold.ttf';
-import Secular from './assets/fonts/SecularOne/SecularOne-Regular.ttf';
 import Lobister from './assets/fonts/Lobster/Lobster-Regular.ttf'
 
 export const GlobalStyle = createGlobalStyle`
@@ -37,10 +36,6 @@ export const GlobalStyle = createGlobalStyle`
     @font-face{
       font-family: "InterBold";
       src: url(${InterBold});
-    }
-    @font-face{
-      font-family: "Secular";
-      src: url(${Secular});
     }
     @font-face{
       font-family: "Lobister";
