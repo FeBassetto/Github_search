@@ -2,7 +2,15 @@
     min-height: 80vh;
     width: 100%;
 
+    padding: 12vw 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width:750px) {
+    .fullProjectContent{
+        padding: 10rem 0;
+    }
 }

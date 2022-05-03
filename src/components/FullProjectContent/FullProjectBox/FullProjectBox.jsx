@@ -1,7 +1,18 @@
 import React from "react";
 import './FullProjectBox.css';
 import styled from 'styled-components';
-
+import {
+    BsCalendarFill,
+    BsFillEyeFill,
+    BsFillStarFill,
+    BsCloudUpload,
+    BsFolderFill,
+    BsLockFill,
+    BsUnlockFill
+}
+    from 'react-icons/bs'
+import { GoIssueOpened } from 'react-icons/go'
+import languagesIcons from "../../../common/Js/LanguageIcons/LanguageIcons";
 
 const StyledBox = styled.div`
     background-color:${props => props.theme.light};
@@ -27,6 +38,8 @@ const FullProjectBox = ({ project }) => {
     const diffupdatedDateHours = diffupdatedDateMinutes / 60
     const diffupdatedDateDays = parseInt(diffupdatedDateHours / 24)
 
+    const language = project.language?.toLowerCase()
+    const languageIcon = language === undefined ? 'default' : language
 
     return (
         <StyledBox className="fullProjectBox">
@@ -35,31 +48,46 @@ const FullProjectBox = ({ project }) => {
             </h1>
 
             <h2 className="fullProjectBox__description">
-                {project.description}
+                {project.description ?
+                    project.description
+                    : 'Sem descrição'}
             </h2>
 
-            <p className="fullProjectBox__difference">
-                Criado: {diffCreatedDays} {diffCreatedDays === 1? 'dia': 'dias'} atrás
+            <p className="fullProjectBox__diffCreate fullProjectBox__info">
+                Criado: {diffCreatedDays} {diffCreatedDays === 1 ? 'dia' : 'dias'} atrás <BsCalendarFill />
             </p>
 
-            <p className="fullProjectBox__difference">
-                Última atualização: {diffupdatedDateDays} {diffupdatedDateDays === 1? 'dia': 'dias'} atrás
+            <p className="fullProjectBox__diffUpdate fullProjectBox__info">
+                Última atualização: {diffupdatedDateDays} {diffupdatedDateDays === 1 ?
+                    'dia' : 'dias'} atrás <BsCloudUpload />
             </p>
 
-            <p className="fullProjectBox__language">
-                {project.language}
+            <p className="fullProjectBox__language fullProjectBox__info">
+                Linguagem: {project.language ?
+                    project.language :
+                    'GitHub'} {languagesIcons[languageIcon]}
             </p>
 
-            <p className="fullProjectBox__watchers">
-                Watchers: {project.watchers_count}
+            <p className="fullProjectBox__visibility fullProjectBox__info">
+                Visibilidade: {project.visibility === 'public' ?
+                    <span>público <BsUnlockFill/> </span> :
+                    <span>privado <BsLockFill/> </span>}
             </p>
 
-            <p className="fullProjectBox__stars">
-                Estrelas: {project.stargazers_count}
+            <p className="fullProjectBox__watchers fullProjectBox__info">
+                Watchers: {project.watchers_count} <BsFillEyeFill />
             </p>
 
-            <p className="fullProjectBox__visibility">
-                Visibilidade: {project.visibility}
+            <p className="fullProjectBox__stars fullProjectBox__info">
+                Estrelas: {project.stargazers_count} <BsFillStarFill />
+            </p>
+
+            <p className="fullProjectBox__size fullProjectBox__info">
+                Tamanho: {project.size} KB <BsFolderFill />
+            </p>
+
+            <p className="fullProjectBox__issues fullProjectBox__info">
+                Issues Abertas: {project.open_issues} <GoIssueOpened />
             </p>
 
         </StyledBox>

@@ -14,7 +14,7 @@
 
     align-items: center;
 
-    animation: showContent 2s linear;
+    animation: showContent 1.5s linear;
 }
 
 @keyframes showContent {

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import UserNotSearch from "../UserNotSearch/UserNotSearch";
 import languagesIcons from './../../common/Js/LanguageIcons/LanguageIcons';
 import {BsCalendarFill, BsFillEyeFill, BsFillStarFill, BsCloudUpload} from 'react-icons/bs'
+import {GoIssueOpened} from 'react-icons/go'
 
 const StyledStarredContent = styled.main`
     background-color:${props => props.theme.background};
@@ -88,7 +89,7 @@ const StarredRepoContent = ({ starred }) => {
                             </p>
 
                             <p className="starredBox__issue starredBox__infos">
-                                Issues: {project.open_issues}
+                                Issues: {project.open_issues} <GoIssueOpened/>
                             </p>
 
                         </StyledStarredBox>

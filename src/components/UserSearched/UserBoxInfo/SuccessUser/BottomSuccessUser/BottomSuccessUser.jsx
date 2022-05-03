@@ -29,7 +29,7 @@ const StyledButtonMore = styled.button`
     }
 `
 
-const BottomSuccess = ({ context }) => {
+const BottomSuccess = ({ context, text }) => {
 
     const projects = context.projects
 
@@ -37,23 +37,29 @@ const BottomSuccess = ({ context }) => {
         <div className="userBoxInfo__bottom">
 
             <StyledTitleProjects className="userBoxInfo__titleProject">
-                Projetos do usuário
+                {text}
             </StyledTitleProjects>
 
-            <StyledProjects
-                className="userBoxInfo__projects">
+            {projects.length > 1 && (
+                <>
+                    <StyledProjects
+                        className="userBoxInfo__projects">
 
-                <ProjectsBottomUser
-                    projects={projects}
-                />
+                        <ProjectsBottomUser
+                            projects={projects}
+                        />
 
-            </StyledProjects>
+                    </StyledProjects>
 
-            <Link to="/projetos" className="userBoxInfo__linkButton">
-                <StyledButtonMore className="userBoxInfo__buttonMore">
-                    Veja mais sobre os projetos
-                </StyledButtonMore>
-            </Link>
+                    <Link to="/projetos" className="userBoxInfo__linkButton">
+                        <StyledButtonMore className="userBoxInfo__buttonMore">
+                            Veja mais sobre os projetos
+                        </StyledButtonMore>
+                    </Link>
+                </>
+            )}
+
+
         </div>
     )
 }

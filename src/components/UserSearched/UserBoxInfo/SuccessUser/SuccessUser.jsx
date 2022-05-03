@@ -11,11 +11,15 @@ const SuccessUser = () => {
 
     const context = useContext(ContextSearchUser)
 
+    const title = context.projects.length > 0 ?
+        'Projetos do usuário' :
+        'Usuário não tem projetos' 
+
     return (
         <>
 
             <TopSuccessUser context={context} />
-            <BottomSuccess context={context} />
+            <BottomSuccess context={context} text={title} />
         </>
     )
 }
