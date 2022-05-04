@@ -33,6 +33,8 @@ const Search = () => {
 
         if (e.key === 'Enter' || e === 'submit') {
             userContext.setUser(searchValue)
+            e.target.parentNode.firstChild.blur()
+            setSearchValue('')
         }
     }
 
