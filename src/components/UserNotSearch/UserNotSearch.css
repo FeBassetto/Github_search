@@ -5,6 +5,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    animation: 1.25s linear showNotSearched;
+}
+
+@keyframes showNotSearched {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
 }
 
 .userNotSearched__titleSearch{
