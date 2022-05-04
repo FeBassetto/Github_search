@@ -26,7 +26,8 @@ import {
     SiElixir,
     SiCrystal,
     SiErlang,
-    SiNim
+    SiNim,
+    SiSwift
 
 } from 'react-icons/si'
 import {VscTerminalPowershell} from 'react-icons/vsc'
@@ -92,6 +93,7 @@ const languagesIcons = {
     'crystal':<StyledBlue><SiCrystal/></StyledBlue>,
     'erlang': <StyledRed><SiErlang/></StyledRed>,
     'nim':<StyledYellow><SiNim/></StyledYellow>,
+    'swift':<StyledOrange><SiSwift/></StyledOrange>,
     'default': <StyledBlack><SiGithub /></StyledBlack>
 
 }
