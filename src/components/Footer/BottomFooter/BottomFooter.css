@@ -63,5 +63,7 @@
 
     .bottomFooter__copyright{
         font-size: 3vw;
+        justify-content: center;
+        text-align: center;
     }
 }
