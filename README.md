@@ -14,6 +14,10 @@ Dependências do projeto:
 
 No diretório do projeto, utilize:
 
+### `npm install`
+
+Para instalar as `dependências` do projeto
+
 ### `npm start`
 
 Rodar o app no modo de desenvolvimento.\
