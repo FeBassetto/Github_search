@@ -76,7 +76,7 @@ const DetailsContent = ({ context }) => {
                 </p>
 
                 <p className="detailsContent__type detailsContent__info">
-                    Tipo do usuário: {context.type} <VscAccount />
+                    Tipo do usuário: {context.type === 'User' ? 'Usuário' : 'Companhia' } <VscAccount />
                 </p>
 
                 <p className="detailsContent__followers detailsContent__info">
