@@ -57,6 +57,7 @@ const SearchUserProvider = ({ children }) => {
                     .then(res => {
                         setError(false)
                         setSearchedUser(res.data)
+                        setLoading(false)
                     })
                     .catch(_ => {
                         catchError()

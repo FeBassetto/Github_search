@@ -21,7 +21,7 @@ const TopSuccessUser = ({context}) => {
                 alt={`${context.searchedUser.login}`} />
 
             <StyledUserName className="userBoxInfo__name">
-                {`${context.searchedUser.name}`}
+                {context.searchedUser.name ? context.searchedUser.name : 'Sem Nome'}
             </StyledUserName>
 
             <StyledUserNickname className="userBoxInfo__nickName">
