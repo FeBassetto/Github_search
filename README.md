@@ -1,6 +1,16 @@
 # Projeto criado utilizando React
 
-Dependências do projeto: 
+## Sobre o projeto
+
+Projeto desenvolvido em React, onde seu objetivo é fazer uma pesquisa de um usuário do github, <br>
+e será retornado informações sobre relativas ao usuário pesquisado como :
+<ul>
+  <li>Projetos</li>
+  <li>Detalhes sobre o usuário</li>
+  <li>Repositórios favoritos</li>
+ </ul>
+
+## Dependências do projeto: 
 
 <ul>
   <li>axios - versão 0.27.2</li>
